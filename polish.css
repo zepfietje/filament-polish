@@ -2,6 +2,10 @@
     @apply h-5 w-5;
 }
 
+.filament-tables-text-column {
+    @apply text-sm;
+}
+
 .filament-notifications-close-button {
     @apply h-5 w-5;
 }
