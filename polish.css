@@ -1,0 +1,7 @@
+.filament-tables-header-cell-sort-icon {
+    @apply h-5 w-5;
+}
+
+.filament-notifications-close-button {
+    @apply h-5 w-5;
+}
