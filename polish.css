@@ -5,3 +5,7 @@
 .filament-notifications-close-button {
     @apply h-5 w-5;
 }
+
+.filament-sidebar {
+    @apply shadow-none;
+}
