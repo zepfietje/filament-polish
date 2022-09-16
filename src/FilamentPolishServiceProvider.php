@@ -5,7 +5,6 @@ namespace ZepFietje\FilamentPolish;
 use Filament\Facades\Filament;
 use Filament\PluginServiceProvider;
 use Filament\Tables\Actions\EditAction;
-use Illuminate\Database\Eloquent\Model;
 use Spatie\LaravelPackageTools\Package;
 
 class FilamentPolishServiceProvider extends PluginServiceProvider
@@ -31,17 +30,7 @@ class FilamentPolishServiceProvider extends PluginServiceProvider
         }
 
         EditAction::configureUsing(
-            callback: fn (EditAction $action): EditAction => $action
-                ->icon(null)
-                ->url(function (Model $record): ?string {
-                    $resource = Filament::getModelResource($record);
-
-                    if (! $resource::hasPage('edit')) {
-                        return null;
-                    }
-
-                    return $resource::getUrl('edit', ['record' => $record]);
-                }),
+            callback: fn (EditAction $action): EditAction => $action->icon(null),
             isImportant: true,
         );
     }
